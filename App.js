@@ -12,6 +12,10 @@ import Constants from "expo-constants";
 
 import imdb from "./assets/imdb.jpg";
 import interStellar from "./assets/interstellar.jpg";
+import matthew from "./assets/matthew.jpg";
+import anne from "./assets/anne.jpg";
+import jessica from "./assets/jessica.jpg";
+import mackenzie from "./assets/mackenzie.jpg";
 export default function App() {
   return (
     <View style={styles.container}>
@@ -44,16 +48,20 @@ export default function App() {
                 style={styles.buttonPresentation}
               ></Button>
             </View>
-
-            <View style={styles.separation}>
-              <Text>XXX</Text>
-            </View>
-
-            <View>
-              <Text>Top Billed Cast</Text>
-              <Text>SEE ALL</Text>
-            </View>
           </View>
+
+          <View style={styles.separation}></View>
+
+          <View>
+            <Text>Top Billed Cast</Text>
+            <Text>SEE ALL</Text>
+          </View>
+          <ScrollView horizontal style={styles.actorsContainer}>
+            <Image source={matthew} style={styles.imgPresentation} />
+            <Image source={anne} style={styles.imgPresentation} />
+            <Image source={jessica} style={styles.imgPresentation} />
+            <Image source={mackenzie} style={styles.imgPresentation} />
+          </ScrollView>
         </View>
       </ScrollView>
       <Text>Ca va ou bien ? ou pas ?</Text>
@@ -101,6 +109,7 @@ const styles = StyleSheet.create({
   presentationContainer: {
     marginTop: 20,
     marginLeft: 10,
+    // height: 500,
     display: "flex",
     flexDirection: "row",
   },
@@ -119,8 +128,8 @@ const styles = StyleSheet.create({
   },
 
   imgPresentation: {
-    height: 150,
-    width: 100,
+    height: 250,
+    width: 150,
     resizeMode: "contain",
   },
 
@@ -135,6 +144,10 @@ const styles = StyleSheet.create({
   separation: {
     backgroundColor: "#212121",
     height: 30,
-    width: 400,
+    width: "100%",
+  },
+
+  actorsContainer: {
+    flexDirection: "row",
   },
 });
