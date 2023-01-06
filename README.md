@@ -2,6 +2,9 @@
 
 Site développé en REACT NATIVE
 
-## Fonctionnalités :
+## Contenu :
 
+* Image principale du film
 * Liste des principaux personnages
+
+Il s'agit d'une page très simplifiée qui avait pour but de nus familiariser avec REACT NATIVE
